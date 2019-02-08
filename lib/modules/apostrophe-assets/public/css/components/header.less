@@ -1,0 +1,61 @@
+.header-area {
+  font-size: 18px;
+  background-color: @primary-color;
+  border: 1px solid @blue-color;
+  padding: 15px;
+  @media screen and (min-width: @screen-sm) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .logo:hover, .tab-link:hover {
+    color: white;
+  }
+
+  .hamburger-menu {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: @secondary-color;
+    font-size: 24px;
+    @media screen and (min-width: @screen-sm) {
+      display: none;
+    }
+  }
+
+  .tabs {
+    display: none;
+    @media screen and (min-width: @screen-sm) {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    li {
+      text-align: center;
+      margin: 15px auto;
+      @media screen and (min-width: @screen-sm) {
+        margin: 0;
+      }
+    }
+  }
+  .active {
+    display: block;
+  }
+  .tab-link, .logo {
+    text-decoration: none;
+    color: @secondary-color;
+  }
+  .tab-link {
+    font-family: @secondaryFont;
+    @media screen and (min-width: @screen-sm) {
+      margin-left: 40px;
+    }
+  }
+  .logo {
+    display: inline-block;
+    font-size: 22px;
+    font-family: @secondaryFont;
+  }
+}
