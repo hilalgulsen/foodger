@@ -1,0 +1,20 @@
+<div class="hero-banner-area">
+    <div id="bannerRotator" class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for banner in data.widget.banners %}
+            {% set image = apos.images.first(banner.bannerImage) %}
+            {% set imageURL = apos.attachments.url(image) %}
+            <div class="swiper-slide">
+                <div class="main-banner" style="background-image: url('{{ imageURL }}')"></div>
+                <div class="overlay"></div>
+                <div class="quote-area">
+                    {% if banner.quote %}
+                    <h1 class="quote">{{ banner.quote }}</h1>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
