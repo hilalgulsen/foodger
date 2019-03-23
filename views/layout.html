@@ -57,7 +57,12 @@ should go.
 {% endblock %}
 
 {% block afterMain %}
-{#
-This would be a great place to put a global footer.
-#}
+{{
+    apos.area(data.global, 'footer', {
+        widgets: {
+            footer: {}
+        },
+        limit: 1
+    })
+}}
 {% endblock %}
