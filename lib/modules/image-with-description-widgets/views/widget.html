@@ -1,0 +1,30 @@
+<div class="image-with-description">
+    <div class="container">
+        {% if data.widget.title or data.widget.subtitle %}
+        <div class="row">
+            <div class="titles">
+                {% if data.widget.title %}
+                <div class="big-title">{{ data.widget.title }}</div>
+                {% endif %}
+                {% if data.widget.subtitle %}
+                <div class="big-subtitle">{{ data.widget.subtitle }}</div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="row flex-row">
+            <div class="col-md-12 col-md-push-12 figure">
+                {% set image = apos.images.first(data.widget.image) %}
+                {% set imageURL = apos.attachments.url(image, {size: 'one-half'}) %}
+                <figure><img src="{{imageURL}}" alt="{{ data.widget.imageTitle }}"/></figure>
+            </div>
+            <div class="col-md-12 col-md-pull-12 text-area">
+                <div class="text-wrapper">
+                    <h2 class="title">{{ data.widget.imageTitle }}</h2>
+                    <h3 class="subtitle">{{ data.widget.imageSubtitle }}</h3>
+                    <div class="description">{{ data.widget.imageDescription.items[0].content | safe}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

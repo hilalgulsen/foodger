@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
 {% block main %}
 {{ apos.singleton(data.page, 'heroBanner', 'hero-banner') }}
+{{ apos.area(data.page, 'body', {
+    widgets: {
+        'image-with-description': {}
+    }
+}) }}
 {% endblock %}

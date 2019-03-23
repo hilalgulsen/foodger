@@ -21,7 +21,9 @@ var apos = require('apostrophe')({
     // `views/` folder of the project
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-    'hero-banner-widgets': {}
+    'hero-banner-widgets': {},
+    'image-widgets': {},
+    'image-with-description-widgets': {}
 
   }
 });
