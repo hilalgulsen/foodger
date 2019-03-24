@@ -1,0 +1,16 @@
+<div class="menu">
+    <div class="container">
+    {% for section in data.widget.sections %}
+        <div class="section-name">{{ section.name }}</div>
+        <ul class="menu-list">
+            {% for meal in section.meals %}
+            <li class="meal-item">
+                <span class="meal-name">{{ meal.mealName }}</span>
+                <span class="meal-price">{{ meal.mealPrice }}</span>
+            </li>
+            <div class="meal-desc">{{ meal.mealDescription }}</div>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    </div>
+</div>

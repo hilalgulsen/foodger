@@ -24,7 +24,8 @@ var apos = require('apostrophe')({
     'hero-banner-widgets': {},
     'image-widgets': {},
     'image-with-description-widgets': {},
-    'footer-widgets': {}
+    'footer-widgets': {},
+    'menu-widgets': {}
 
   }
 });
