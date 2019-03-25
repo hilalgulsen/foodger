@@ -28,13 +28,14 @@ We recommend you use the beforeMain block for global page components
 like headers or navigation.
 #}
 <header>
-    <nav class="header-area">
+    <div class="container">
+        <nav class="header-area">
         <span class="hamburger-menu" id="hamburger-menu">
             <i class="fas fa-bars"></i>
         </span>
-        <a href="/" class="logo"><i class="fas fa-hamburger"></i> foodger</a>
-        <ul class="tabs" id="header-menu">
-            {% for tab in data.home._children %}
+            <a href="/" class="logo"><i class="fas fa-hamburger"></i> foodger</a>
+            <ul class="tabs" id="header-menu">
+                {% for tab in data.home._children %}
                 <li class="
                     {% if data.page and
                         (apos.pages.isAncestorOf(tab, data.page) or tab._id == data.page._id)
@@ -42,9 +43,10 @@ like headers or navigation.
                     current
                     {% endif %}
                 "><a class="tab-link" href="{{ tab._url }}">{{ tab.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </header>
 {% endblock %}
 

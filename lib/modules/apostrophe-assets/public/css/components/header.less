@@ -1,74 +1,76 @@
-.header-area {
-	font-size: 18px;
+header {
 	background-color: @primary-color;
-	padding: 15px;
-	@media screen and (min-width: @screen-sm) {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px;
-	}
-
-	.logo:hover, .tab-link:hover {
-		color: white;
-	}
-
-	.hamburger-menu {
-		position: absolute;
-		right: 15px;
-		cursor: pointer;
-		color: @secondary-color;
-		font-size: 24px;
-		@media screen and (min-width: @screen-sm) {
-			display: none;
-		}
-	}
-
-	.tabs {
-		display: none;
+	.header-area {
+		font-size: 18px;
+		padding: 15px;
 		@media screen and (min-width: @screen-sm) {
 			display: flex;
-			margin-right: 30px;
-			flex-direction: row;
-			justify-content: flex-end;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
 		}
 
-		li {
-			text-align: center;
-		}
-	}
-
-	.active {
-		display: block;
-		position: absolute;
-		top: 50px;
-		left: 0;
-		width: 100%;
-		z-index: 100;
-		background-color: @primary-color;
-
-		li {
-			padding: 15px;
-			border: 1px solid @brown-color;
+		.logo:hover, .tab-link:hover {
+			color: white;
 		}
 
-	}
-
-	.tab-link, .logo {
-		text-decoration: none;
-		color: @secondary-color;
-	}
-
-	.tab-link {
-		font-family: @secondaryFont;
-		@media screen and (min-width: @screen-sm) {
-			margin-left: 40px;
+		.hamburger-menu {
+			position: absolute;
+			right: 15px;
+			cursor: pointer;
+			color: @secondary-color;
+			font-size: 24px;
+			@media screen and (min-width: @screen-sm) {
+				display: none;
+			}
 		}
-	}
 
-	.logo {
-		display: inline-block;
-		font-size: 22px;
-		font-family: @secondaryFont;
+		.tabs {
+			display: none;
+			@media screen and (min-width: @screen-sm) {
+				display: flex;
+				margin-right: 30px;
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+
+			li {
+				text-align: center;
+			}
+		}
+
+		.active {
+			display: block;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			z-index: 100;
+			background-color: @primary-color;
+
+			li {
+				padding: 15px;
+				border: 1px solid @brown-color;
+			}
+
+		}
+
+		.tab-link, .logo {
+			text-decoration: none;
+			color: @secondary-color;
+		}
+
+		.tab-link {
+			font-family: @secondaryFont;
+			@media screen and (min-width: @screen-sm) {
+				margin-left: 40px;
+			}
+		}
+
+		.logo {
+			display: inline-block;
+			font-size: 22px;
+			font-family: @secondaryFont;
+		}
 	}
 }
