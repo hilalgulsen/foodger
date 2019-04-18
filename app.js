@@ -22,7 +22,6 @@ var apos = require('apostrophe')({
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
     'hero-banner-widgets': {},
-    'image-widgets': {},
     'image-with-description-widgets': {},
     'footer-widgets': {},
     'menu-widgets': {}

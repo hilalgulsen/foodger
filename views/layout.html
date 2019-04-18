@@ -59,12 +59,5 @@ should go.
 {% endblock %}
 
 {% block afterMain %}
-{{
-    apos.area(data.global, 'footer', {
-        widgets: {
-            footer: {}
-        },
-        limit: 1
-    })
-}}
+{{ apos.singleton(data.global, 'footer', 'footer') }}
 {% endblock %}
